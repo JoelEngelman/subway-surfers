@@ -3,40 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name="theme-color" content="#0b1724">
-<title>Metro Rush — Endless Runner</title>
+<meta name="theme-color" content="#102536">
+<title>Metro Rush — 3D Endless Runner</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<canvas id="game" aria-label="Metro Rush endless runner"></canvas>
+<div id="game"></div>
 <div id="hud">
   <div class="top-left"><div class="wordmark">METRO<span>RUSH</span></div><div class="distance"><span id="distance">0</span> m</div></div>
-  <div class="top-right">
-    <div class="pill coin-pill"><span class="coin-icon">●</span><b id="coins">0</b></div>
-    <div class="pill"><span>SCORE</span><b id="score">0</b></div>
-    <div class="pill"><span>BEST</span><b id="best">0</b></div>
-  </div>
+  <div class="top-right"><div class="pill coin-pill"><span class="coin-icon">●</span><b id="coins">0</b></div><div class="pill"><span>SCORE</span><b id="score">0</b></div><div class="pill"><span>BEST</span><b id="best">0</b></div></div>
   <div id="powerHud" class="power-hud hidden"><div id="powerIcon">⚡</div><div><b id="powerName">POWER</b><div class="bar"><i id="powerBar"></i></div></div></div>
 </div>
-<div id="start" class="overlay">
-  <div class="menu-card">
-    <div class="mini-logo">✦</div>
-    <div class="eyebrow">ENDLESS RUNNER</div>
-    <h1>METRO <span>RUSH</span></h1>
-    <p>Dash through the city, dodge trains, collect coins and chase a ridiculous high score.</p>
-    <button id="play">START RUN</button>
-    <div class="controls"><span>← → <small>MOVE</small></span><span>↑ <small>JUMP</small></span><span>↓ <small>ROLL</small></span><span>SPACE <small>BOARD</small></span></div>
-  </div>
-</div>
-<div id="gameover" class="overlay hidden">
-  <div class="menu-card gameover-card">
-    <div class="crash">✦</div><div class="eyebrow">RUN ENDED</div><h2>CAUGHT!</h2>
-    <div class="results"><div><span>SCORE</span><b id="finalScore">0</b></div><div><span>COINS</span><b id="finalCoins">0</b></div><div><span>DISTANCE</span><b id="finalDistance">0m</b></div></div>
-    <div id="newBest" class="new-best hidden">NEW PERSONAL BEST</div>
-    <button id="again">RUN AGAIN</button><button id="home" class="ghost">HOME</button>
-  </div>
-</div>
+<div id="start" class="overlay"><div class="menu-card"><div class="mini-logo">✦</div><div class="eyebrow">3D ENDLESS RUNNER</div><h1>METRO <span>RUSH</span></h1><p>Dash through the city, dodge trains, collect coins and chase a ridiculous high score.</p><button id="play">START RUN</button><div class="controls"><span>← → <small>MOVE</small></span><span>↑ <small>JUMP</small></span><span>↓ <small>ROLL</small></span><span>SPACE <small>BOARD</small></span></div></div></div>
+<div id="gameover" class="overlay hidden"><div class="menu-card gameover-card"><div class="crash">✦</div><div class="eyebrow">RUN ENDED</div><h2>CAUGHT!</h2><div class="results"><div><span>SCORE</span><b id="finalScore">0</b></div><div><span>COINS</span><b id="finalCoins">0</b></div><div><span>DISTANCE</span><b id="finalDistance">0m</b></div></div><div id="newBest" class="new-best hidden">NEW PERSONAL BEST</div><button id="again">RUN AGAIN</button><button id="home" class="ghost">HOME</button></div></div>
 <div id="flash"></div>
-<script src="game.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"}}</script>
+<script type="module" src="game.js"></script>
 </body>
 </html>
